@@ -45,7 +45,7 @@ bool point = false;
 double counter = 0;
 
 //Configurable values
-float mag_power_calib = 100;
+float mag_power_calib = 400;
 double mag_samps_per_sec = 16;
 short cap_power = 400;
 float decay_factor = 0.5;
@@ -93,7 +93,7 @@ void loop()
         process magnetic data into power, revolutions, and timestamp
         */
         counter = counter + 1;
-        tm0 = magneticData.z;
+        tm0 = magneticData.y;
         
         if(tm2 > curr_max)
         {
